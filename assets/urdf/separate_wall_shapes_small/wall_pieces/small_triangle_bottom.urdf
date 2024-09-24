@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="small_triangle_bottom">
+    <link name="small_triangle_bottom">
+        <visual>
+        <origin xyz="0 0 -0.77474049613800055614" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_triangle_bottom.obj"/>
+            </geometry>
+            <material name="small_triangle_bottom_material">
+            <color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.77474049613800055614" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_triangle_bottom.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="100" />
+            <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+
+
+</robot>

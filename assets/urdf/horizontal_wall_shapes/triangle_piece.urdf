@@ -1,0 +1,26 @@
+<robot name="triangle_cubby">
+<link name="triangle_cubby">
+<visual>
+<origin xyz="0 -0.27316948175430300072 -0.0089670356669109586856" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/triangle_cubby.obj"/>
+</geometry>
+<material name="triangle_cubby_material">
+<color rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 -0.27316948175430300072 -0.0089670356669109586856" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/triangle_cubby.obj"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0.04623641712158549355 0.0075271657568290253892" rpy="0 0 0"/>
+<mass value="100" />
+<inertia ixx="1.0378731898709678827" ixy="0"  ixz="0" iyy="0.70279529262242579346" iyz="-0.072345724157779164876" izz="0.93207755073409481739" />
+</inertial>
+</link>
+
+
+</robot>

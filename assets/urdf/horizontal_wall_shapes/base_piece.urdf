@@ -1,0 +1,26 @@
+<robot name="base_piece">
+<link name="base_piece">
+<visual>
+<origin xyz="0 0 0.36500000000000010214" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/base_piece.obj"/>
+</geometry>
+<material name="part_2_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0.36500000000000010214" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/base_piece.obj"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 1.4456028966473387318e-17 -5.5511151231257827021e-17" rpy="0 0 0"/>
+<mass value="100" />
+<inertia ixx="11.62825000000000486" ixy="0"  ixz="0" iyy="1.5440000000000011493" iyz="-1.0914533166150877953e-15" izz="11.62825000000000486" />
+</inertial>
+</link>
+
+
+</robot>

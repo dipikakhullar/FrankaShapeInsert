@@ -1,0 +1,26 @@
+<robot name="onshape">
+<link name="hex_cubby">
+<visual>
+<origin xyz="0 0.27731861877441410513 0.023465854094924028239" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///hex_cubby.stl"/>
+</geometry>
+<material name="hex_cubby_material">
+<color rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0.27731861877441410513 0.023465854094924028239" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///hex_cubby.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="7.2956584032014604658e-18 0 -0.0069284558115253400135" rpy="0 0 0"/>
+<mass value="47.114277472528513613" />
+<inertia ixx="0.44215494433583041323" ixy="0"  ixz="0" iyy="0.38887814402676634806" iyz="0" izz="0.36737198345925392573" />
+</inertial>
+</link>
+
+
+</robot>

@@ -1,0 +1,346 @@
+Importing module 'gym_38' (/home/rmendonc/research/dipika/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/rmendonc/research/dipika/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+WARNING: Forcing CPU pipeline.
+Not connected to PVD
+Physics Engine: PhysX
+Physics Device: cpu
+GPU Pipeline: disabled
+Working directory: /home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs
+Loading asset 'urdf/franka_description/robots/franka_panda.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/wall_pieces/small_hex_bottom.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/wall_pieces/small_square_bottom.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/wall_pieces/wall_top.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/wall_pieces/small_triangle_bottom.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/shape_objects/object_hex_05_15.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/shape_objects/object_triangle_05_15.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+Loading asset 'urdf/separate_wall_shapes_small/shape_objects/object_cube_05_15.urdf' from '/home/rmendonc/research/dipika/IsaacGymEnvs/isaacgymenvs/../assets'
+
+======== Asset info franka: ========
+Got 11 bodies, 10 joints, and 9 DOFs
+Bodies:
+  0: 'panda_link0'
+  1: 'panda_link1'
+  2: 'panda_link2'
+  3: 'panda_link3'
+  4: 'panda_link4'
+  5: 'panda_link5'
+  6: 'panda_link6'
+  7: 'panda_link7'
+  8: 'panda_hand'
+  9: 'panda_leftfinger'
+ 10: 'panda_rightfinger'
+Joints:
+  0: 'panda_joint1' (Revolute)
+  1: 'panda_joint2' (Revolute)
+  2: 'panda_joint3' (Revolute)
+  3: 'panda_joint4' (Revolute)
+  4: 'panda_joint5' (Revolute)
+  5: 'panda_joint6' (Revolute)
+  6: 'panda_joint7' (Revolute)
+  7: 'panda_hand_joint' (Fixed)
+  8: 'panda_finger_joint1' (Prismatic)
+  9: 'panda_finger_joint2' (Prismatic)
+DOFs:
+  0: 'panda_joint1' (Rotation)
+  1: 'panda_joint2' (Rotation)
+  2: 'panda_joint3' (Rotation)
+  3: 'panda_joint4' (Rotation)
+  4: 'panda_joint5' (Rotation)
+  5: 'panda_joint6' (Rotation)
+  6: 'panda_joint7' (Rotation)
+  7: 'panda_finger_joint1' (Translation)
+  8: 'panda_finger_joint2' (Translation)
+
+======== Asset info hex_bottom: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'small_hex_bottom'
+Joints:
+DOFs:
+
+======== Asset info square_bottom: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'small_square_bottom'
+Joints:
+DOFs:
+
+======== Asset info wall_top: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'wall_top'
+Joints:
+DOFs:
+
+======== Asset info triangle_bottom: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'small_triangle_bottom'
+Joints:
+DOFs:
+
+======== Asset info hex: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'hex_05_15'
+Joints:
+DOFs:
+
+======== Asset info triangle: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'triangle_05_15'
+Joints:
+DOFs:
+
+======== Asset info cube: ========
+Got 1 bodies, 0 joints, and 0 DOFs
+Bodies:
+  0: 'cube_05_15'
+Joints:
+DOFs:
+=== Environment info: ================================================
+8 actors total
+
+===== Actor: franka =======================================
+
+Bodies
+['panda_link0', 'panda_link1', 'panda_link2', 'panda_link3', 'panda_link4', 'panda_link5', 'panda_link6', 'panda_link7', 'panda_hand', 'panda_leftfinger', 'panda_rightfinger']
+{'panda_hand': 8, 'panda_leftfinger': 9, 'panda_link0': 0, 'panda_link1': 1, 'panda_link2': 2, 'panda_link3': 3, 'panda_link4': 4, 'panda_link5': 5, 'panda_link6': 6, 'panda_link7': 7, 'panda_rightfinger': 10}
+
+Joints
+['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7', 'panda_hand_joint', 'panda_finger_joint1', 'panda_finger_joint2']
+{'panda_finger_joint1': 8, 'panda_finger_joint2': 9, 'panda_hand_joint': 7, 'panda_joint1': 0, 'panda_joint2': 1, 'panda_joint3': 2, 'panda_joint4': 3, 'panda_joint5': 4, 'panda_joint6': 5, 'panda_joint7': 6}
+
+ Degrees Of Freedom (DOFs)
+['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7', 'panda_finger_joint1', 'panda_finger_joint2']
+{'panda_finger_joint1': 7, 'panda_finger_joint2': 8, 'panda_joint1': 0, 'panda_joint2': 1, 'panda_joint3': 2, 'panda_joint4': 3, 'panda_joint5': 4, 'panda_joint6': 5, 'panda_joint7': 6}
+
+Poses from Body State:
+[(( 1.11758709e-08, -1.4901161e-08, -3.72529030e-09), (-7.0710695e-01, -8.8475645e-09,  1.11758709e-08, 7.0710689e-01))
+ ((-1.93667802e-08,  3.3300018e-01,  2.79396772e-08), (-7.0710683e-01, -3.7020072e-08,  1.27911335e-08, 7.0710683e-01))
+ ((-1.93767846e-08,  3.3300018e-01,  3.53902578e-08), (-1.0000001e+00, -2.3283064e-08,  5.07736786e-08, 1.4901822e-08))
+ ((-1.49011612e-08,  6.4900017e-01,  9.12696123e-08), (-7.0710677e-01,  1.4901161e-08,  4.09781933e-08, 7.0710689e-01))
+ (( 8.25000107e-02,  6.4900023e-01,  7.07805157e-08), ( 5.9604645e-08, -4.4703484e-08, -3.48934010e-02, 9.9939096e-01))
+ (( 2.69826800e-02,  1.0378191e+00,  1.22934580e-07), (-7.0667624e-01,  2.4673222e-02, -2.46733725e-02, 7.0667624e-01))
+ (( 2.69826837e-02,  1.0378190e+00,  1.07102096e-07), ( 1.3038516e-08, -5.8978912e-08, -3.48932520e-02, 9.9939108e-01))
+ (( 1.14768423e-01,  1.0316817e+00,  1.17346644e-07), ( 7.0667619e-01, -2.4673238e-02, -2.46731825e-02, 7.0667619e-01))
+ (( 1.07305825e-01,  9.2494214e-01,  1.15949661e-07), ( 6.6232574e-01,  2.4763821e-01, -2.93228358e-01, 6.4344168e-01))
+ (( 1.03232779e-01,  8.6668432e-01,  1.20140612e-07), ( 6.6232574e-01,  2.4763823e-01, -2.93228358e-01, 6.4344174e-01))
+ (( 1.03232786e-01,  8.6668432e-01,  1.14552677e-07), ( 6.6232580e-01,  2.4763821e-01, -2.93228328e-01, 6.4344168e-01))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.))]
+
+Body 'panda_link0' has position (1.1175871e-08, -1.4901161e-08, -3.7252903e-09)
+Body 'panda_link1' has position (-1.936678e-08, 0.33300018, 2.7939677e-08)
+Body 'panda_link2' has position (-1.9376785e-08, 0.33300018, 3.5390258e-08)
+Body 'panda_link3' has position (-1.4901161e-08, 0.64900017, 9.126961e-08)
+Body 'panda_link4' has position (0.08250001, 0.6490002, 7.0780516e-08)
+Body 'panda_link5' has position (0.02698268, 1.0378191, 1.2293458e-07)
+Body 'panda_link6' has position (0.02698268, 1.037819, 1.07102096e-07)
+Body 'panda_link7' has position (0.11476842, 1.0316817, 1.17346644e-07)
+Body 'panda_hand' has position (0.10730582, 0.92494214, 1.1594966e-07)
+Body 'panda_leftfinger' has position (0.10323278, 0.8666843, 1.2014061e-07)
+Body 'panda_rightfinger' has position (0.10323279, 0.8666843, 1.1455268e-07)
+
+DOF states:
+[( 0.      , 0.) ( 0.      , 0.) ( 0.      , 0.) (-0.069801, 0.)
+ ( 0.      , 0.) ( 0.      , 0.) ( 0.      , 0.) ( 0.      , 0.)
+ ( 0.      , 0.)]
+
+DOF 'panda_joint1' has position 0.0
+DOF 'panda_joint2' has position 0.0
+DOF 'panda_joint3' has position 0.0
+DOF 'panda_joint4' has position -0.069800995
+DOF 'panda_joint5' has position 0.0
+DOF 'panda_joint6' has position 0.0
+DOF 'panda_joint7' has position 0.0
+DOF 'panda_finger_joint1' has position 0.0
+DOF 'panda_finger_joint2' has position 0.0
+
+===== Actor: hex_bottom =======================================
+
+Bodies
+['small_hex_bottom']
+{'small_hex_bottom': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 2.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'small_hex_bottom' has position (0., 0., 2.)
+
+DOF states:
+[]
+
+
+===== Actor: square_bottom =======================================
+
+Bodies
+['small_square_bottom']
+{'small_square_bottom': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 4.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'small_square_bottom' has position (0., 0., 4.)
+
+DOF states:
+[]
+
+
+===== Actor: wall_top =======================================
+
+Bodies
+['wall_top']
+{'wall_top': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 6.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'wall_top' has position (0., 0., 6.)
+
+DOF states:
+[]
+
+
+===== Actor: triangle_bottom =======================================
+
+Bodies
+['small_triangle_bottom']
+{'small_triangle_bottom': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 8.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'small_triangle_bottom' has position (0., 0., 8.)
+
+DOF states:
+[]
+
+
+===== Actor: hex =======================================
+
+Bodies
+['hex_05_15']
+{'hex_05_15': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 10.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'hex_05_15' has position (0., 0., 10.)
+
+DOF states:
+[]
+
+
+===== Actor: triangle =======================================
+
+Bodies
+['triangle_05_15']
+{'triangle_05_15': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 12.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'triangle_05_15' has position (0., 0., 12.)
+
+DOF states:
+[]
+
+
+===== Actor: cube =======================================
+
+Bodies
+['cube_05_15']
+{'cube_05_15': 0}
+
+Joints
+[]
+{}
+
+ Degrees Of Freedom (DOFs)
+[]
+{}
+
+Poses from Body State:
+[((0., 0., 14.), (-0.7071068, 0., 0., 0.7071068))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.))]
+
+Body 'cube_05_15' has position (0., 0., 14.)
+
+DOF states:
+[]

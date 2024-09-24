@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="cube_05_15">
+    <link name="cube_05_15">
+        <visual>
+            <origin xyz="0 -0.12085083963153536724 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/shape_objects/object_cube_05_15.obj"/>
+            </geometry>
+            <material name="cube_05_15_material">
+            <color rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 -0.12085083963153536724 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/shape_objects/object_cube_05_15.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value=".375" />
+            <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />  <!-- Adjust these values based on your object -->        </inertial>
+    </link>
+
+
+</robot>

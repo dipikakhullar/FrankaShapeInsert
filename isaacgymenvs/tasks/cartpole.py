@@ -28,10 +28,10 @@
 
 import numpy as np
 import os
-import torch
 
 from isaacgym import gymutil, gymtorch, gymapi
 from .base.vec_task import VecTask
+import torch
 
 class Cartpole(VecTask):
 

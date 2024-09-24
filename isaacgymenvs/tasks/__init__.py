@@ -39,7 +39,7 @@ from .factory.factory_task_nut_bolt_screw import FactoryTaskNutBoltScrew
 from .franka_cabinet import FrankaCabinet
 from .franka_cube_stack import FrankaCubeStack
 from .humanoid import Humanoid
-from .humanoid_amp import HumanoidAMP
+# from .humanoid_amp import HumanoidAMP
 from .ingenuity import Ingenuity
 from .quadcopter import Quadcopter
 from .shadow_hand import ShadowHand
@@ -56,6 +56,21 @@ from .allegro_kuka.allegro_kuka_two_arms_reorientation import AllegroKukaTwoArms
 from .industreal.industreal_task_pegs_insert import IndustRealTaskPegsInsert
 from .industreal.industreal_task_gears_insert import IndustRealTaskGearsInsert
 
+
+
+
+# Import your new task
+from isaacgymenvs.tasks.cube_cubby_task import CubeCubbyTask
+from isaacgymenvs.tasks.cube_cubby_task2 import CubeCubbyTask2
+from isaacgymenvs.tasks.cube_cubby_task_custom_wall import CubeCubbyTaskCustomWall
+from isaacgymenvs.tasks.cube_cubby_task_custom_wall_sc import CubeCubbyTaskCustomWallSC
+from isaacgymenvs.tasks.generalized_wall_insert import GeneralizedWallInsert
+from isaacgymenvs.tasks.split_shape_wall_insert import SplitShapeWallInsert
+from isaacgymenvs.tasks.split_shape_wall_insert_small_holes import SplitShapeWallInsertSmallHoles
+from isaacgymenvs.tasks.split_shape_wall_insert_small_holes2s import SplitShapeWallInsertSmallHoles2S
+from isaacgymenvs.tasks.trial_1 import Trial1
+from isaacgymenvs.tasks.wall_insert2s import WallInsert2S
+from isaacgymenvs.tasks.generalized_wall_insert_horizontal import GeneralizedWallInsertHorizontal
 
 def resolve_allegro_kuka(cfg, *args, **kwargs):
     subtask_name: str = cfg["env"]["subtask"]
@@ -106,9 +121,22 @@ isaacgym_task_map = {
     "FrankaCabinet": FrankaCabinet,
     "FrankaCubeStack": FrankaCubeStack,
     "Humanoid": Humanoid,
-    "HumanoidAMP": HumanoidAMP,
+    # "HumanoidAMP": HumanoidAMP,
     "Ingenuity": Ingenuity,
     "Quadcopter": Quadcopter,
     "ShadowHand": ShadowHand,
     "Trifinger": Trifinger,
+    'CubeCubbyTask': CubeCubbyTask,  
+    'CubeCubbyTask2': CubeCubbyTask2,
+
+    'Trial1': Trial1, # Register your task here,
+    'SplitShapeWallInsert': SplitShapeWallInsert,
+    'GeneralizedWallInsert': GeneralizedWallInsert,
+    'SplitShapeWallInsertSmallHoles': SplitShapeWallInsertSmallHoles,
+    'SplitShapeWallInsertSmallHoles2S': SplitShapeWallInsertSmallHoles2S,
+    'CubeCubbyTaskCustomWall': CubeCubbyTaskCustomWall,
+    'CubeCubbyTaskCustomWallSC': CubeCubbyTaskCustomWallSC,
+    "WallInsert2S": WallInsert2S,
+    "GeneralizedWallInsertHorizontal": GeneralizedWallInsertHorizontal,
+
 }

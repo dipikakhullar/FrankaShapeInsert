@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="small_square_bottom">
+    <link name="small_square_bottom">
+        <visual>
+            <origin xyz="0 1.1102230246251565404e-16 0.98000000000000020428" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_square_bottom.obj"/>
+            </geometry>
+            <material name="small_square_bottom_material">
+            <color rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 1.1102230246251565404e-16 0.98000000000000020428" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_square_bottom.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="100" />
+            <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+
+
+</robot>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="shape_wall_two_holes">
+    <link name="shape_wall_two_holes">
+        <visual>
+            <origin rpy="-1.5708 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="shape_wall_two_holes/shape_wall_one_square.obj"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="shape_wall_two_holes/shape_wall_one_square.obj"/>
+            </geometry>
+            <!-- <sdf resolution="256"/> -->
+        </collision>
+        <inertial>
+            <origin xyz="0.0 0.0 0.0"/>
+            <mass value="500"/>
+            <friction value="1.0"/>
+            <inertia ixx="1000.0" ixy="0"  ixz="0" iyy="1000.0" iyz="0" izz="1000.0" />
+        </inertial>
+        <gazebo>
+            <static>true</static>
+        </gazebo>
+    </link>
+</robot>

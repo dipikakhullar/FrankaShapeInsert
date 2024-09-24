@@ -109,6 +109,7 @@ class CommonAgent(a2c_continuous.A2CAgent):
         return
 
     def train(self):
+        print("IN COMMON AGENT TRAIN!!!!!!")
         self.init_tensors()
         self.last_mean_rewards = -100500
         start_time = time.time()
@@ -130,13 +131,16 @@ class CommonAgent(a2c_continuous.A2CAgent):
 
         while True:
             epoch_num = self.update_epoch()
+            print("common agent: ", epoch_num)
             train_info = self.train_epoch()
 
             sum_time = train_info['total_time']
             total_time += sum_time
             frame = self.frame
 
+            print("self.global_rank == 0", self.global_rank == 0)
             if self.global_rank == 0:
+                print("INSIDE self.global_rank == 0")
                 scaled_time = sum_time
                 scaled_play_time = train_info['play_time']
                 curr_frames = self.curr_frames
@@ -152,12 +156,15 @@ class CommonAgent(a2c_continuous.A2CAgent):
                 self._log_train_info(train_info, frame)
 
                 self.algo_observer.after_print_stats(frame, epoch_num, total_time)
-                
+                print("self.game_rewards.current_size > 0", self.game_rewards.current_size > 0)
                 if self.game_rewards.current_size > 0:
+                    print("INSIDE self.game_rewards.current_size > 0")
                     mean_rewards = self.game_rewards.get_mean()
                     mean_lengths = self.game_lengths.get_mean()
 
+                    print("self.value_size", self.value_size)
                     for i in range(self.value_size):
+                        print(i)
                         self.writer.add_scalar('rewards/frame'.format(i), mean_rewards[i], frame)
                         self.writer.add_scalar('rewards/iter'.format(i), mean_rewards[i], epoch_num)
                         self.writer.add_scalar('rewards/time'.format(i), mean_rewards[i], total_time)
@@ -167,9 +174,11 @@ class CommonAgent(a2c_continuous.A2CAgent):
 
                     if self.has_self_play_config:
                         self.self_play_manager.update(self)
-
+               
+                print(self.save_freq, self.save_freq > 0)
                 if self.save_freq > 0:
                     if (epoch_num % self.save_freq == 0):
+                        print("SAVING MODEL")
                         self.save(self.model_output_file + "_" + str(epoch_num))
 
                 if epoch_num > self.max_epochs:
@@ -178,6 +187,7 @@ class CommonAgent(a2c_continuous.A2CAgent):
                     return self.last_mean_rewards, epoch_num
 
                 update_time = 0
+                print("update_time", update_time)
         return
 
     def train_epoch(self):

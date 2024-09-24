@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="onshape">
+    <link name="hex_05_15">
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/shape_objects/object_hex_05_15.obj"/>
+            </geometry>
+            <material name="hex_05_15_material">
+            <color rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/shape_objects/object_hex_05_15.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value=".375" />
+            <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />  <!-- Adjust these values based on your object -->
+        </inertial>
+    </link>
+
+
+</robot>

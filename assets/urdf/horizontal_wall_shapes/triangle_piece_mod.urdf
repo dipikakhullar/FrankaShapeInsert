@@ -1,0 +1,26 @@
+<robot name="onshape">
+<link name="triangle_cubby">
+<visual>
+<origin xyz="0 -0.20516948175430299584 0.028032964333089077646" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///triangle_cubby.stl"/>
+</geometry>
+<material name="triangle_cubby_material">
+<color rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 -0.20516948175430299584 0.028032964333089077646" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///triangle_cubby.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 -0.0013250097427880136447" rpy="0 0 0"/>
+<mass value="59.43744802283291051" />
+<inertia ixx="0.47519708221447481966" ixy="0"  ixz="0" iyy="0.43173343226204335954" iyz="0" izz="0.43971330343798420426" />
+</inertial>
+</link>
+
+
+</robot>

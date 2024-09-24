@@ -443,7 +443,9 @@ class VecTask(Env):
             Observation dictionary, indices of environments being reset
         """
         done_env_ids = self.reset_buf.nonzero(as_tuple=False).flatten()
+        # print("done_env_ids", done_env_ids)
         if len(done_env_ids) > 0:
+            # print("resetting idx")
             self.reset_idx(done_env_ids)
 
         self.obs_dict["obs"] = torch.clamp(self.obs_buf, -self.clip_obs, self.clip_obs).to(self.rl_device)

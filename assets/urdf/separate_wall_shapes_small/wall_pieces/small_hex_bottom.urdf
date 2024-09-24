@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="small_hex_bottom">
+    <link name="small_hex_bottom">
+        <visual>
+            <origin xyz="0 1.3877787807814456755e-17 0.025000000000000001388" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_hex_bottom.obj"/>
+            </geometry>
+            <material name="small_hex_bottom_material">
+            <color rgba="0.76862745098039220171 0.88627450980392152857 0.95294117647058818044 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 1.3877787807814456755e-17 0.025000000000000001388" rpy="0 -0 0" />
+            <geometry>
+            <mesh filename="separate_wall_shapes_small/wall_pieces/small_hex_bottom.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="100" />
+            <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+
+
+</robot>

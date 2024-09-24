@@ -1,11 +1,10 @@
-
 # Task name - used to pick the class to load
 task_name: ${task.name}
 # experiment name. defaults to name of training config
 experiment: ''
 
 # if set to positive integer, overrides the default number of environments
-num_envs: ''
+num_envs: 16384
 
 # seed - set to -1 to choose random seed
 seed: 42
@@ -13,7 +12,7 @@ seed: 42
 torch_deterministic: False
 
 # set the maximum number of learning iterations to train for. overrides default per-environment setting
-max_iterations: ''
+max_iterations: 50000
 
 ## Device config
 #  'physx' or 'flex'
@@ -41,11 +40,11 @@ sigma: ''
 # set to True to use multi-gpu training
 multi_gpu: False
 
-wandb_activate: False
+wandb_activate: True
 wandb_group: ''
 wandb_name: ${train.params.config.name}
 wandb_entity: ''
-wandb_project: 'isaacgymenvs'
+wandb_project: 'isaacgym-env'
 wandb_tags: []
 wandb_logcode_dir: '' 
 
@@ -56,10 +55,30 @@ force_render: True
 
 # disables rendering
 headless: False
+# Train parameters
+train:
+    params:
+        # batch_size: 16384  # Ensure this is a multiple of minibatch_size
+        # minibatch_size: 1024  # Set this based on your needs
+        minibatch_size: 16384
+        horizon_length: 64
 
+        # minibatch_size: 4
+        # horizon_length: 1
+        # minibatch_size: 16384  # Match this to your batch size or use a smaller fraction
+        seed: 42
+        # horizon_length: 64  # The number of steps to run the policy before updating
+        num_agents: 1  # Add this if it's not in your config
+
+        algo:
+            name: a2c_continuous
+        model:
+            name: continuous_a2c_logstd
+        network:
+            name: actor_critic
 # set default task and default training config based on task
 defaults:
-  - task: Ant
+  - task: FrankaCabinet
   - train: ${task}PPO
   - pbt: no_pbt
   - override hydra/job_logging: disabled

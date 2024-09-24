@@ -1,0 +1,29 @@
+round_peg_hole_16mm_loose:
+    round_peg_16mm_loose:
+        urdf_path: 'factory_round_peg_16mm_loose'
+        diameter: 0.015983
+        length: 0.050
+        density: 8000.0
+        friction: 0.5
+    round_hole_16mm:
+        urdf_path: 'factory_round_hole_16mm'
+        diameter: 0.0165
+        height: 0.0089916
+        density: 8000.0
+        friction: 0.5
+
+rectangular_peg_hole_16mm_loose:
+    rectangular_peg_16mm_loose:
+        urdf_path: 'factory_rectangular_peg_16mm_loose'
+        width: 0.015957
+        depth: 0.009910
+        length: 0.050
+        density: 8000.0
+        friction: 0.5
+    rectangular_hole_16mm:
+        urdf_path: 'factory_rectangular_hole_16mm'
+        width: 0.0162182
+        depth: 0.0101576
+        height: 0.0089916
+        density: 8000.0
+        friction: 0.5

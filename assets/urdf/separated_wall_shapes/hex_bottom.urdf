@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="onshape">
+<link name="hex_bottom">
+<visual>
+<origin xyz="8.0753459769766777754e-05 0.0032259640991688064149 0.14493167400360104646" rpy="0 -0 0" />
+<geometry>
+<mesh filename="separated_wall_shapes/hex_bottom.obj"/>
+</geometry>
+<material name="hex_bottom_material">
+<color rgba="0.76862745098039220171 0.88627450980392152857 0.95294117647058818044 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="8.0753459769766777754e-05 0.0032259640991688064149 0.14493167400360104646" rpy="0 -0 0" />
+<geometry>
+<mesh filename="separated_wall_shapes/hex_bottom.obj"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="100" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+
+</robot>

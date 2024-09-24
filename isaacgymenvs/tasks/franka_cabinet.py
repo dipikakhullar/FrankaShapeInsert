@@ -28,12 +28,14 @@
 
 import numpy as np
 import os
-import torch
 
 from isaacgym import gymutil, gymtorch, gymapi
 from isaacgymenvs.utils.torch_jit_utils import to_torch, get_axis_params, tensor_clamp, \
     tf_vector, tf_combine
-from .base.vec_task import VecTask
+# from .base.vec_task import VecTask
+from isaacgymenvs.tasks.base.vec_task import VecTask
+
+import torch
 
 
 class FrankaCabinet(VecTask):
@@ -135,11 +137,12 @@ class FrankaCabinet(VecTask):
         asset_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../assets")
         franka_asset_file = "urdf/franka_description/robots/franka_panda.urdf"
         cabinet_asset_file = "urdf/sektion_cabinet_model/urdf/sektion_cabinet_2.urdf"
-
+        wall_asset_file = "urdf/shape_wall_two_holes/shape_wall_two_holes.urdf"
         if "asset" in self.cfg["env"]:
             asset_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.cfg["env"]["asset"].get("assetRoot", asset_root))
             franka_asset_file = self.cfg["env"]["asset"].get("assetFileNameFranka", franka_asset_file)
             cabinet_asset_file = self.cfg["env"]["asset"].get("assetFileNameCabinet", cabinet_asset_file)
+            wall_asset_file = self.cfg["env"]["asset"].get("assetFileNameWall", wall_asset_file)
 
         # load franka asset
         asset_options = gymapi.AssetOptions()
@@ -172,6 +175,12 @@ class FrankaCabinet(VecTask):
         print("num franka dofs: ", self.num_franka_dofs)
         print("num cabinet bodies: ", self.num_cabinet_bodies)
         print("num cabinet dofs: ", self.num_cabinet_dofs)
+
+        # create wall asset
+        wall_opts = gymapi.AssetOptions()
+        wall_opts.fix_base_link = True
+        wall_opts.disable_gravity = True
+        wall_asset = self.gym.load_asset(self.sim, asset_root, wall_asset_file, wall_opts)
 
         # set franka dof properties
         franka_dof_props = self.gym.get_asset_dof_properties(franka_asset)
@@ -243,6 +252,10 @@ class FrankaCabinet(VecTask):
 
             if self.aggregate_mode == 2:
                 self.gym.begin_aggregate(env_ptr, max_agg_bodies, max_agg_shapes, True)
+            wall_start_pose = gymapi.Transform()
+            wall_start_pose.p = gymapi.Vec3(0.0, 0.0, 1 + .02 + .6/2)
+            wall_start_pose.r = gymapi.Quat(0.0, 0.0, 0.0, 1.0)
+            wall_actor = self.gym.create_actor(env_ptr, wall_asset, wall_start_pose, "new_wall", i, 1, 0)
 
             cabinet_pose = cabinet_start_pose
             cabinet_pose.p.x += self.start_position_noise * (np.random.rand() - 0.5)

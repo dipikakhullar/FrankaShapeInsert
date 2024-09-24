@@ -1,0 +1,26 @@
+<robot name="hex_cubby">
+<link name="hex_cubby">
+<visual>
+<origin xyz="0 0.3168186187744140847 -0.0055341459050759905791" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/hex_cubby.obj"/>
+</geometry>
+<material name="hex_cubby_material">
+<color rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0.3168186187744140847 -0.0055341459050759905791" rpy="0 -0 0" />
+<geometry>
+<mesh filename="horizontal_wall_shapes/hex_cubby.obj"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="7.2887639356613829165e-19 -0.052332384297446965515 0.0052234876034041154841" rpy="0 0 0"/>
+<mass value="100" />
+<inertia ixx="0.96380684697936136462" ixy="0"  ixz="0" iyy="0.65443939391432182084" iyz="0.078722879658699465577" izz="0.81646263621522996434" />
+</inertial>
+</link>
+
+
+</robot>

@@ -70,7 +70,7 @@ class Ant(VecTask):
         super().__init__(config=self.cfg, rl_device=rl_device, sim_device=sim_device, graphics_device_id=graphics_device_id, headless=headless, virtual_screen_capture=virtual_screen_capture, force_render=force_render)
 
         if self.viewer != None:
-            cam_pos = gymapi.Vec3(50.0, 25.0, 2.4)
+            cam_pos = gymapi.Vec3(1000.0, 25.0, 1002.4)
             cam_target = gymapi.Vec3(45.0, 25.0, 0.0)
             self.gym.viewer_camera_look_at(self.viewer, None, cam_pos, cam_target)
 

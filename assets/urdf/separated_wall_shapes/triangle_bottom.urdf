@@ -1,0 +1,26 @@
+<robot name="triangle_bottom">
+<link name="triangle_bottom">
+<visual>
+<origin xyz="0 2.7755575615628913511e-17 -0.64974049613800033409" rpy="0 -0 0" />
+<geometry>
+<mesh filename="separated_wall_shapes/triangle_bottom.obj"/>
+</geometry>
+<material name="triangle_bottom_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 2.7755575615628913511e-17 -0.64974049613800033409" rpy="0 -0 0" />
+<geometry>
+<mesh filename="separated_wall_shapes/triangle_bottom.obj"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="100" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+
+</robot>
